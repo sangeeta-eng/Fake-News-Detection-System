@@ -36,9 +36,6 @@ if st.button("Check News"):
         # Predict the news label
         prediction = model.predict(text_features)[0]
 
-st.write("Model prediction:", prediction)
-st.write("Model classes:", model.classes_)
-
         # Display result
         if prediction == "FAKE":
             st.error("Prediction: FAKE NEWS")
